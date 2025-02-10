@@ -7,7 +7,27 @@ import static java.lang.System.in;
 
 public class Patika {
     public static void main(String[] args) {
-        notOrtalaması();
+        //notOrtalaması();
+        kdvTutari();
+    }
+    public  static  void kdvTutari(){
+        Scanner input = new Scanner(in);
+        System.out.println("Lütfen para miktarını belirtiniz: ");
+        double para = input.nextDouble();
+        double tutar;
+
+        if(para >0 && para <1000){
+            System.out.println("KDV'siz Fiyat = "+ para);
+            tutar = para+ (para * 18/100);
+            System.out.println("KDV'li Fiyat = " + String.format("%.2f", tutar));
+            System.out.println("KDV tutarı = "+ String.format("%.2f", tutar-para));
+        }
+        else if(para>=1000){
+            System.out.println("KDV'siz Fiyat = "+ para);
+            tutar = para+ (para * 8/100);
+            System.out.println("KDV'li Fiyat = " + String.format("%.2f", tutar));
+            System.out.println("KDV tutarı = "+ String.format("%.2f", tutar-para));
+        }
     }
     public static void notOrtalaması(){
         ArrayList<Integer> notlar = new ArrayList<>();
