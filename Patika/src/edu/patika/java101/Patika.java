@@ -9,8 +9,25 @@ public class Patika {
     public static void main(String[] args) {
         // notOrtalaması();
        // kdvTutari();
-        alanHesapla();
+       // alanHesapla();
+        taksimetre();
     }
+
+    public  static  void taksimetre(){
+        double km, price, total;
+
+        Scanner input   = new Scanner(in);
+        System.out.println("Girilen km değerini giriniz: ");
+        km = input.nextDouble();
+        price = km* 2.2;
+        total = price+10;
+
+      total=   (price <20) ? 20: total;
+
+        System.out.println("Toplam tutar: "+ total);
+    }
+
+
 
     public static void alanHesapla(){
         Scanner input = new Scanner(in);
