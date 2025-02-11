@@ -7,9 +7,26 @@ import static java.lang.System.in;
 
 public class Patika {
     public static void main(String[] args) {
-        //notOrtalaması();
-        kdvTutari();
+        // notOrtalaması();
+       // kdvTutari();
+        alanHesapla();
     }
+
+    public static void alanHesapla(){
+        Scanner input = new Scanner(in);
+        System.out.println("Üçgenin ilk kenar uzunluğunu giriniz: ");
+        int ilKenar = input.nextInt();
+        System.out.println("İkinci kenar uzunluğunu giriniz: ");
+        int ikinciKenar = input.nextInt();
+
+        double hipotenus;
+
+        hipotenus = Math.sqrt(Math.pow(ilKenar,2) + Math.pow(ikinciKenar,2));
+        System.out.println("Üçgenin hipotenüsü : " + hipotenus);
+
+
+    }
+
     public  static  void kdvTutari(){
         Scanner input = new Scanner(in);
         System.out.println("Lütfen para miktarını belirtiniz: ");
