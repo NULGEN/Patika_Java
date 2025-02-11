@@ -10,9 +10,28 @@ public class Patika {
         // notOrtalaması();
        // kdvTutari();
        // alanHesapla();
-        taksimetre();
+       // taksimetre();
+        daire();
+
     }
 
+    public  static  void  daire(){
+        Scanner input = new Scanner(in);
+        System.out.println("Dairenin yarı çapını giriniz: ");
+        double yariCap = input.nextDouble();
+        System.out.println("Merkez açı ölçüsünü giriniz: ");
+        double aci = input.nextDouble();
+
+        double cevre = Math.PI*2*yariCap;
+        double alan = Math.PI * Math.pow(yariCap,2);
+        double dilimAlan = (3.14* Math.pow(yariCap,2)*aci)/360;
+
+        System.out.println("Dairenin cevresi: " + String.format("%.2f",cevre));
+        System.out.println("Dairenin alanı: "+ String.format("%.2f",alan));
+        System.out.println("Dairenin merkez açı ölçüsü: "+ String.format("%.2f", dilimAlan));
+
+
+    }
     public  static  void taksimetre(){
         double km, price, total;
 
@@ -26,8 +45,6 @@ public class Patika {
 
         System.out.println("Toplam tutar: "+ total);
     }
-
-
 
     public static void alanHesapla(){
         Scanner input = new Scanner(in);
