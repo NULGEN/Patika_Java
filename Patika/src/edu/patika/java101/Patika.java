@@ -20,9 +20,24 @@ public class Patika {
       //  System.out.println("Toplam tutar: " + flyerPrice());
        // cinzodiak();
        // sayiToplami();
-       faktoriyel();
+      // faktoriyel();
+        usHesaplama();
 
     }
+
+    public static  void usHesaplama(){
+       double total =1;
+
+        Scanner input = new Scanner(in);
+        System.out.print("Üssü alınacak sayıyı giriniz: ");
+        int n= input.nextInt();
+        System.out.print("Üs alacak sayı: ");
+        int k = input.nextInt();
+        total = Math.pow(n,k);
+
+        System.out.println("Sonuc: "+ total);
+    }
+
     public  static  void  faktoriyel(){
         System.out.println("lütfen sayi giriniz: ");
         Scanner input = new Scanner(in);
