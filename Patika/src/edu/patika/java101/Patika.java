@@ -18,8 +18,24 @@ public class Patika {
         //sifreGiris();
        // numberSort();
       //  System.out.println("Toplam tutar: " + flyerPrice());
-        cinzodiak();
+       // cinzodiak();
+        sayiToplami();
 
+    }
+
+    public  static  void sayiToplami(){
+        Scanner input = new Scanner(in);
+        int sayi;
+        int total=0;
+       do {
+           System.out.println("Lütfen sayi giriniz: ");
+           sayi = input.nextInt();
+           if(sayi %4 ==0) {
+               total+= sayi;
+           }
+       }while (sayi%2==0);
+
+        System.out.println("Girilen sayıların toplamı: "+ total);
     }
 
     public static  void cinzodiak(){
