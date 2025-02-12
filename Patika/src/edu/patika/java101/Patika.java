@@ -14,10 +14,26 @@ public class Patika {
        // taksimetre();
        // daire();
         //manavKasa();
-        hesapMakinasi();
+       // hesapMakinasi();
+        sifreGiris();
 
     }
-    public static  void hesapMakinasi(){
+    public static void sifreGiris(){
+        String username, sifre;
+        Scanner input = new Scanner(in);
+        System.out.print("Kullanıcı Adınız: ");
+        username = input.nextLine();
+        System.out.print("Şifreniz: ");
+        sifre = input.nextLine();
+
+        if(username.equals("patika") && sifre.equals("java123")){
+            System.out.println("Hoşgeldiniz, giriş başarılı..");
+        }
+        else{
+            System.out.println("Hatalı giriş yaptınız!..");
+        }
+    }
+    public static void hesapMakinasi(){
         System.out.println("Lütfen yapmak istediğiniz işlemi griniz: ");
         System.out.println(" 1-Toplama \n 2-Çıkarma \n 3-Çarpma \n 4-Bölme");
         Scanner input = new Scanner(in);
@@ -55,7 +71,7 @@ public class Patika {
 
     }
 
-    public  static  void  manavKasa(){
+    public  static void  manavKasa(){
        Scanner input = new Scanner(in);
         double armut= 2.14;
         double elma = 3.67;
@@ -81,7 +97,7 @@ public class Patika {
 
         System.out.println("Toplam Tutar: "+ toplam+ " TL ");
     }
-    public  static  void  daire(){
+    public  static void  daire(){
         Scanner input = new Scanner(in);
         System.out.println("Dairenin yarı çapını giriniz: ");
         double yariCap = input.nextDouble();
@@ -98,7 +114,7 @@ public class Patika {
 
 
     }
-    public  static  void taksimetre(){
+    public  static void taksimetre(){
         double km, price, total;
 
         Scanner input   = new Scanner(in);
@@ -127,7 +143,7 @@ public class Patika {
 
     }
 
-    public  static  void kdvTutari(){
+    public  static void kdvTutari(){
         Scanner input = new Scanner(in);
         System.out.println("Lütfen para miktarını belirtiniz: ");
         double para = input.nextDouble();
