@@ -19,8 +19,19 @@ public class Patika {
        // numberSort();
       //  System.out.println("Toplam tutar: " + flyerPrice());
        // cinzodiak();
-        sayiToplami();
+       // sayiToplami();
+       faktoriyel();
 
+    }
+    public  static  void  faktoriyel(){
+        System.out.println("lütfen sayi giriniz: ");
+        Scanner input = new Scanner(in);
+        int n = input.nextInt();
+        int total=1;
+       for(int i=1; i<=n; i++){
+           total = total*i;
+       }
+        System.out.println("sonuç: " + total);
     }
 
     public  static  void sayiToplami(){
