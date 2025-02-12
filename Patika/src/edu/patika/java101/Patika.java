@@ -16,11 +16,117 @@ public class Patika {
         //manavKasa();
        // hesapMakinasi();
         //sifreGiris();
-        numberSort();
+       // numberSort();
+      //  System.out.println("Toplam tutar: " + flyerPrice());
+        cinzodiak();
 
     }
 
+    public static  void cinzodiak(){
+        Scanner input = new Scanner(in);
+        System.out.print("Doğum yılınızı giriniz : ");
+        int yil = input.nextInt();
+        int mod = yil % 12;
+        switch (mod){
+            case 0:
+                System.out.println("Maymun");
+                break;
+            case 1:
+                System.out.println("Horoz");
+                break;
+            case 2:
+                System.out.println("Köpek");
+                break;
+            case 3:
+                System.out.println("Domuz");
+                break;
+            case 4:
+                System.out.println("Fare");
+                break;
+            case 5:
+                System.out.println("Öküz");
+                break;
+            case 6:
+                System.out.println("Kaplan");
+                break;
+            case 7:
+                System.out.println("Tavşan");
+                break;
+            case 8:
+                System.out.println("Ejderha");
+                break;
+            case 9:
+                System.out.println("Yılan");
+                break;
+            case 10:
+                System.out.println("At");
+                break;
+            case 11:
+                System.out.println("Koyun");
+                break;
+            default:
+                System.out.println("Hatalı veri girişi");
 
+
+
+
+
+
+        }
+    }
+
+   public  static double  flyerPrice(){
+
+       Scanner input = new Scanner(in);
+
+       System.out.print("Mesafeyi km türünden giriniz : ");
+       double km = input.nextDouble();
+       System.out.print("Yaşınızı giriniz : ");
+       int yas = input.nextInt();
+       System.out.print("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ) :");
+       int secim = input.nextInt();
+       double tutar, indirim, toplamTutar = 0;
+               double yasIndirimi= 0;
+
+
+       if( km > 0 && yas >= 0 && secim==1 || secim ==2){
+
+         tutar = km * 0.10;
+        if(yas >=0 && yas <12){
+          yasIndirimi = tutar *0.5;
+          toplamTutar = tutar- yasIndirimi;
+                 if(secim ==2){
+                    indirim = toplamTutar* 0.2;
+                    toplamTutar = (toplamTutar-indirim)*2;
+                 }
+        }
+        else if( yas >=12 && yas <24){
+            yasIndirimi = tutar * 0.1;
+            toplamTutar = tutar- yasIndirimi;
+            if(secim ==2){
+                indirim = toplamTutar* 0.2;
+               toplamTutar = (toplamTutar-indirim)*2;
+            }
+        }
+        else if( yas >65){
+            yasIndirimi = tutar * 0.3;
+            toplamTutar = tutar- yasIndirimi;
+            if(secim ==2){
+                indirim = toplamTutar* 0.2;
+                toplamTutar = (toplamTutar-indirim)*2;
+            }
+        }
+//           System.out.println("Toplam Tutar: "+ toplamTutar);
+       }
+       else{
+           System.out.println("Hatalı veri girdiniz!...");
+       }
+       return  toplamTutar;
+
+
+
+
+   }
     public  static  void numberSort(){
         int a,b,c;
         Scanner input = new Scanner(in);
