@@ -1,5 +1,6 @@
 package edu.patika.java101;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,10 +12,37 @@ public class Patika {
        // kdvTutari();
        // alanHesapla();
        // taksimetre();
-        daire();
+       // daire();
+        manavKasa();
 
     }
 
+    public  static  void  manavKasa(){
+       Scanner input = new Scanner(in);
+        double armut= 2.14;
+        double elma = 3.67;
+        double domates = 1.11;
+        double muz = 0.95;
+        double patlican = 5;
+
+        System.out.println("Armut Kaç Kilo ? ");
+       double armutKg = input.nextDouble();
+       System.out.println("Elma Kaç Kilo ? ");
+        double elmaKg = input.nextDouble();
+
+        System.out.println("Domates Kaç Kilo ? ");
+      double domatesKg = input.nextDouble();
+
+        System.out.println("Muz Kaç Kilo ? ");
+       double muzKg = input.nextDouble();
+
+        System.out.println("Patlıcan Kaç Kilo ? ");
+       double patlicanKg = input.nextDouble();
+
+        Double toplam = elmaKg*elma + armutKg*armut + muzKg* muz +patlicanKg*patlican + domatesKg*domates;
+
+        System.out.println("Toplam Tutar: "+ toplam+ " TL ");
+    }
     public  static  void  daire(){
         Scanner input = new Scanner(in);
         System.out.println("Dairenin yarı çapını giriniz: ");
