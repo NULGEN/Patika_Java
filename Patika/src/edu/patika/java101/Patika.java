@@ -13,7 +13,45 @@ public class Patika {
        // alanHesapla();
        // taksimetre();
        // daire();
-        manavKasa();
+        //manavKasa();
+        hesapMakinasi();
+
+    }
+    public static  void hesapMakinasi(){
+        System.out.println("Lütfen yapmak istediğiniz işlemi griniz: ");
+        System.out.println(" 1-Toplama \n 2-Çıkarma \n 3-Çarpma \n 4-Bölme");
+        Scanner input = new Scanner(in);
+        int giris = input.nextInt();
+        System.out.print("Birinci sayi: ");
+        double first = input.nextDouble();
+        System.out.print("İkinci sayi: ");
+        double second = input.nextDouble();
+        double sonuc;
+       switch (giris){
+           case 1:
+               sonuc= first + second;
+               System.out.println( "İşlem sonucu: "+ sonuc);
+               break;
+           case 2 :
+               sonuc = first - second;
+               System.out.println( "İşlem sonucu: "+ sonuc);
+           break;
+           case 3:
+               sonuc = first * second;
+               System.out.println( "İşlem sonucu: "+ sonuc);
+               break;
+           case 4:
+               sonuc = (first==0 || second==0) ? 0: (first/second);
+               System.out.println( "İşlem sonucu: "+ sonuc);
+               break;
+           default:
+               System.out.println("Yanlış işlem yaptınız tekrar deneyiniz");
+       }
+       input.close();
+
+
+
+
 
     }
 
