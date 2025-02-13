@@ -16,9 +16,9 @@ public class Patika {
        // alanHesapla();
        // taksimetre();
        // daire();
-        //manavKasa();
+       //manavKasa();
        // hesapMakinasi();
-        //sifreGiris();
+       //sifreGiris();
        // numberSort();
       //  System.out.println("Toplam tutar: " + flyerPrice());
        // cinzodiak();
@@ -29,10 +29,85 @@ public class Patika {
         //  ebob();
         // ekok();
       //  minMax();
-        for(int i =2; i<=100; i++){
+
+     /*   for(int i =2; i<=100; i++){
             if(isPrime(i))
             System.out.print(i + " ");
         }
+
+      */
+      //
+        //  palidrom();
+
+      //  System.out.println(fibonacci(6));
+
+        // pow();
+        Scanner input = new Scanner(in);
+        System.out.print(" Taban değeri giriniz: ");
+        int taban = input.nextInt();
+        System.out.print(" Üs değerini giriniz: ");
+        int us = input.nextInt();
+        System.out.println( powRecurisive(taban,us));
+
+
+    }
+
+    public  static  int powRecurisive(int base, int exponent){
+        if(exponent==0) return 1;
+        else if (exponent<0) {
+            return 1/ powRecurisive(base, -exponent);
+        }
+        else {
+            return base* powRecurisive(base, exponent-1);
+        }
+    }
+    public  static void pow(){
+        Scanner input = new Scanner(in);
+        System.out.print(" Taban değeri giriniz: ");
+        int taban = input.nextInt();
+        System.out.print(" Üs değerini giriniz: ");
+        int us = input.nextInt();
+        int sonuc =1;
+        for(int i =1; i<=us; i++){
+            sonuc *= taban;
+        }
+
+        System.out.println("Sonuc: "+ sonuc);
+
+    }
+    public  static int fibonacci(int n){
+        if(n==1 || n==2){
+            return 1;
+        }
+        return  fibonacci(n-1)+ fibonacci(n-2);
+    }
+
+    public static void palidrom(){
+        Scanner input = new Scanner(in);
+        System.out.print("Lüfen bir sayı giriniz: ");
+        String number = input.nextLine();
+
+        int count = number.length();
+
+
+        if(count==1){
+            System.out.println(number + " is palidrom.");
+        }
+        else{
+            char[] arr= number.toCharArray();
+            String reverse = "";
+            for(int i =0; i< arr.length; i++){
+                reverse = arr[i]+reverse;
+            }
+
+            if(number.contains(reverse)){
+                System.out.println(number + " is palidrom.");
+            }
+            else {
+                System.out.println(number+ " is not palidrome.");
+            }
+        }
+
     }
 
     public static  boolean isPrime(int number){
