@@ -2,6 +2,8 @@ package edu.patika.java101;
 
 import java.security.PublicKey;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -22,8 +24,52 @@ public class Patika {
        // sayiToplami();
       // faktoriyel();
        // usHesaplama();
-        amstrong();
+        // amstrong();
+        //  ebob();
+          ekok();
+    }
+    public  static  void  ekok(){
+        Scanner input    = new Scanner(in);
+        System.out.print("İlk sayıyı giriniz: ");
+        int n1 = input.nextInt();
+        System.out.print("İkinci sayıyı giriniz: ");
+        int n2 = input.nextInt();
+        int ekok=1;
+        for(int i=1; i<= (n1*n2); i++){
+            if(i% n1 ==0 && i%n2 ==0){
+                ekok =i;
+                break;
+            }
+        }
+        System.out.println("EKOK : "+ ekok);
+    }
 
+    public  static  void ebob(){
+        Scanner input    = new Scanner(in);
+        System.out.print("İlk sayıyı giriniz: ");
+        int n1 = input.nextInt();
+        System.out.print("İkinci sayıyı giriniz: ");
+        int n2 = input.nextInt();
+        int sinir = (n1 < n2) ? n1 : n2;
+        int ebob = 1;
+//
+
+//        for(int i = 1; i<=sinir; i++){
+//            if(n1 % i ==0 && n2 %i==0){
+//               ebob = i;
+//            }
+//        }
+
+        for (int i= sinir; i>=1; i--){
+            if(n1 % i ==0 && n2 % i ==0){
+                ebob = i;
+                break;
+            }
+        }
+
+
+        System.out.println("EBOB : " + ebob);
+//        System.out.println("EKOK : " + ekok);
     }
 
     public static void amstrong(){
