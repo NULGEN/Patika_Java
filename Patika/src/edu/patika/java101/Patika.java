@@ -21,8 +21,32 @@ public class Patika {
        // cinzodiak();
        // sayiToplami();
       // faktoriyel();
-        usHesaplama();
+       // usHesaplama();
+        amstrong();
 
+    }
+
+    public static void amstrong(){
+        Scanner input = new Scanner(in);
+        System.out.print("lütfen bir sayı giriniz: ");
+        int n= input.nextInt();
+        int temp;
+        int sayi = n;
+        int toplam = 0;
+
+        while(sayi!=0){
+
+            temp = sayi %10;
+            toplam += Math.pow(temp,3);
+            sayi = sayi / 10;
+
+        }
+        if(toplam == n){
+            System.out.println(n + " sayısı bir Amstrong sayısıdır.");
+        }
+        else {
+            System.out.println(n + " sayısı bir Amstrong sayısı değildir");
+        }
     }
 
     public static  void usHesaplama(){
