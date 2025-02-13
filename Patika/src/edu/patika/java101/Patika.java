@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.System.console;
 import static java.lang.System.in;
 
 public class Patika {
@@ -26,7 +27,43 @@ public class Patika {
        // usHesaplama();
         // amstrong();
         //  ebob();
-          ekok();
+        // ekok();
+      //  minMax();
+        for(int i =2; i<=100; i++){
+            if(isPrime(i))
+            System.out.print(i + " ");
+        }
+    }
+
+    public static  boolean isPrime(int number){
+        if(number < 2) return  false;
+
+        for(int i = 2; i<=Math.sqrt(number); i++){
+           if(number % i ==0){
+               return  false;
+           }
+        }
+        return  true;
+    }
+
+    public  static void  minMax(){
+        Scanner input    = new Scanner(in);
+        System.out.print("Kaç adet sayı gireceksiniz : ");
+        int n1 = input.nextInt();
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+       for(int i =1; i<= n1; i++){
+           System.out.print(i+ ". Sayıyı giriniz : ");
+           int n2 = input.nextInt();
+           if(n2>max ){
+               max = n2;
+           }
+           if(n2 < min){
+               min = n2;
+           }
+       }
+        System.out.println(" Max: "+ max +", Min: "+ min);
+
     }
     public  static  void  ekok(){
         Scanner input    = new Scanner(in);
