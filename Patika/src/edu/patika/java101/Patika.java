@@ -34,7 +34,6 @@ public class Patika {
             if(isPrime(i))
             System.out.print(i + " ");
         }
-
       */
       //
         //  palidrom();
@@ -42,14 +41,38 @@ public class Patika {
       //  System.out.println(fibonacci(6));
 
         // pow();
+        /*
         Scanner input = new Scanner(in);
         System.out.print(" Taban değeri giriniz: ");
         int taban = input.nextInt();
         System.out.print(" Üs değerini giriniz: ");
         int us = input.nextInt();
         System.out.println( powRecurisive(taban,us));
+        */
+        Scanner input = new Scanner(in);
+        System.out.print("Bir sayı giriniz: ");
+        int number = input.nextInt();
+        if(isPrimeRec(number,2)){
+            System.out.println(number+ " bir asal sayıdır. ");
+        }
+        else{
+            System.out.println(number+ " bir asal sayı değildir. ");
+        }
 
 
+    }
+
+    public  static boolean isPrimeRec(int n, int divisor){
+        if(n < 2) return false;
+
+        if(divisor> Math.sqrt(n)){
+            return true;
+        }
+        if(n % divisor == 0){
+            return  false;
+        }
+
+        return  isPrimeRec(n, divisor+1);
     }
 
     public  static  int powRecurisive(int base, int exponent){
