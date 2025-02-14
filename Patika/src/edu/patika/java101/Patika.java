@@ -49,6 +49,7 @@ public class Patika {
         int us = input.nextInt();
         System.out.println( powRecurisive(taban,us));
         */
+        /*
         Scanner input = new Scanner(in);
         System.out.print("Bir sayı giriniz: ");
         int number = input.nextInt();
@@ -57,8 +58,28 @@ public class Patika {
         }
         else{
             System.out.println(number+ " bir asal sayı değildir. ");
-        }
+        } */
 
+        desen(16,16, false);
+
+
+    }
+
+    public static void desen(int current, int original, boolean isIncreasing){
+        System.out.print(current + " ");
+
+        if(current <=0){
+            isIncreasing =true;
+        }
+        if(current == original && isIncreasing){
+            return;
+        }
+        if(isIncreasing){
+            desen(current+5,original,isIncreasing);
+        }
+        else {
+            desen(current-5,original,isIncreasing);
+        }
 
     }
 
