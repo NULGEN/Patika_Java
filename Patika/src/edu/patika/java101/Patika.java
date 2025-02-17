@@ -65,9 +65,46 @@ public class Patika {
             System.out.println(number+ " bir asal sayı değildir. ");
         } */
 
-        desen(16,16, false);
+       // desen(16,16, false);
 
+        int[] numbers = {15, 12, 788, 1, -1, -778, 2, 0}; // Örnek dizi
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Bir sayı giriniz: ");
+        int inputNumber = sc.nextInt();
+
+        Integer closestSmaller = null;
+        Integer closestLarger = null;
+
+        // Dizideki elemanları kontrol etme
+        for (int num : numbers) {
+            if (num < inputNumber) {
+                if (closestSmaller == null || num > closestSmaller) {
+                    closestSmaller = num;
+                }
+            }
+            if (num > inputNumber) {
+                if (closestLarger == null || num < closestLarger) {
+                    closestLarger = num;
+                }
+            }
+        }
+
+        // Sonuçları ekrana yazdırma
+        System.out.println("Girilen sayı: " + inputNumber);
+        if (closestSmaller != null) {
+            System.out.println("Girilen sayıdan küçük en yakın sayı: " + closestSmaller);
+        } else {
+            System.out.println("Girilen sayıdan küçük bir değer bulunamadı.");
+        }
+
+        if (closestLarger != null) {
+            System.out.println("Girilen sayıdan büyük en yakın sayı: " + closestLarger);
+        } else {
+            System.out.println("Girilen sayıdan büyük bir değer bulunamadı.");
+        }
+
+        sc.close();
     }
 
     public static void desen(int current, int original, boolean isIncreasing){
@@ -110,6 +147,7 @@ public class Patika {
             return base* powRecurisive(base, exponent-1);
         }
     }
+
     public  static void pow(){
         Scanner input = new Scanner(in);
         System.out.print(" Taban değeri giriniz: ");
@@ -124,6 +162,7 @@ public class Patika {
         System.out.println("Sonuc: "+ sonuc);
 
     }
+
     public  static int fibonacci(int n){
         if(n==1 || n==2){
             return 1;
@@ -189,6 +228,7 @@ public class Patika {
         System.out.println(" Max: "+ max +", Min: "+ min);
 
     }
+
     public  static  void  ekok(){
         Scanner input    = new Scanner(in);
         System.out.print("İlk sayıyı giriniz: ");
@@ -348,7 +388,7 @@ public class Patika {
         }
     }
 
-   public  static double  flyerPrice(){
+    public  static double  flyerPrice(){
 
        Scanner input = new Scanner(in);
 
@@ -400,6 +440,7 @@ public class Patika {
 
 
    }
+
     public  static  void numberSort(){
         int a,b,c;
         Scanner input = new Scanner(in);
@@ -438,6 +479,7 @@ public class Patika {
         }
         input.close();
     }
+
     public static void sifreGiris(){
         String username, sifre;
         Scanner input = new Scanner(in);
@@ -453,6 +495,7 @@ public class Patika {
             System.out.println("Hatalı giriş yaptınız!..");
         }
     }
+
     public static void hesapMakinasi(){
         System.out.println("Lütfen yapmak istediğiniz işlemi griniz: ");
         System.out.println(" 1-Toplama \n 2-Çıkarma \n 3-Çarpma \n 4-Bölme");
@@ -517,6 +560,7 @@ public class Patika {
 
         System.out.println("Toplam Tutar: "+ toplam+ " TL ");
     }
+
     public  static void  daire(){
         Scanner input = new Scanner(in);
         System.out.println("Dairenin yarı çapını giriniz: ");
@@ -534,6 +578,7 @@ public class Patika {
 
 
     }
+
     public  static void taksimetre(){
         double km, price, total;
 
@@ -582,6 +627,7 @@ public class Patika {
             System.out.println("KDV tutarı = "+ String.format("%.2f", tutar-para));
         }
     }
+
     public static void notOrtalaması(){
         ArrayList<Integer> notlar = new ArrayList<>();
         Scanner input = new Scanner(in);
@@ -612,3 +658,8 @@ public class Patika {
 
     }
 }
+
+
+
+
+
